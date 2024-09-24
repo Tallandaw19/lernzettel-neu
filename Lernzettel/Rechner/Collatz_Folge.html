@@ -1,0 +1,54 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+Collatz
+    </title>
+</head>
+<body><h1>Collatz-Folge und das 3n+1 Problem...</h1>
+<script>
+ 
+    // Collatz Folge
+     
+    function Collatz() {
+    
+    var vAusgabe="";
+    var n=document.getElementById("idN").value;
+    
+        // Starte 
+        // Solange wir 1 nicht erreicht haben...
+        
+		var count=1;
+		while (n != 1)
+        {
+            
+            vAusgabe = vAusgabe + n + "->"; 
+            // If n ungerade...
+            
+            if (n%2>0){
+                n = 3*n + 1;
+				
+			}
+            // If n gerade...
+            else {
+					n=n/2
+					
+			}
+		
+			count++;
+     }   
+        
+        vAusgabe = vAusgabe + n + "<br>"; 
+	
+
+        document.getElementById("idAusgabe").innerHTML=vAusgabe;
+    }
+ 
+    
+ 
+ 
+</script>
+Collatz-Zahl: <input id="idN" type="text" value="">
+<button onclick="Collatz();">Collatz</button></br></br>
+<div id="idAusgabe">Hier kommt die Collatz-Folge...</div>
+<a href="../index.html">Zurück</a>
+</body></html>

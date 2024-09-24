@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)file://lsbk-fs01/25ASS1-02$/Downloads/Multi-Taschenrechner-von-Natan-Talla%20(2).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Taschenrechner von NT</title>
+
+    <script>
+        var vZ1;
+        var vZ2;
+        var vErgebnis;
+
+        function fAddition() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+            vErgebnis = vZ1 + vZ2;
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fSubtraktion() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+            vErgebnis = vZ1 - vZ2;
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fMultiplikation() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+            vErgebnis = vZ1 * vZ2;
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fDividieren() {
+            vZ1 = parseFloat(document.getElementById("idZ1").value);
+            vZ2 = parseFloat(document.getElementById("idZ2").value);
+            vErgebnis = vZ1 / vZ2;
+            
+            if(vZ2 == 0) {
+             vErgebnis = "Keine Division durch 0"
+     
+        }
+
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+        }
+
+        function fMudolo(){
+            vZ1=parseFloat(document.getElementById("idZ1").value);
+            vZ2=parseFloat(document.getElementById("idZ2").value);
+            vErgebnis= vZ1 % vZ2;
+        document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+         
+        }
+
+        function fWurzel(){
+            vZ1= parseFloat(document.getElementById("idZ1").value);
+            vErgebnis= Math.sqrt(vZ1)
+            document.getElementById("idErgebnis").textContent = "Ergebnis lautet: " + vErgebnis;
+
+        }
+
+    </script>
+</head>
+<body>
+    <style>
+        body {
+          background-color: rgb(0, 0, 0);
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        h5 {
+            color:aliceblue
+        }
+
+        div {
+            color: aliceblue;
+        }
+
+        </style>
+    <h1>Multi-Taschenrechner</h1>
+    <h5>von Natan - Talla / ASM1</h5>
+
+    (<input id="idZ1" type="number" value="">)
+    (<input id="idZ2" type="number" value="">)
+
+    <br><br>
+    <button onclick="fAddition();">Addition</button><br><br>
+    <button onclick="fSubtraktion();">Subtraktion</button><br><br>
+    <button onclick="fMultiplikation();">Multiplikation</button><br><br>
+    <button onclick="fDividieren();">Dividieren</button><br><br>
+    <button onclick="fWurzel();">Wurzel</button><br><br>
+    <button onclick="fMudolo();">Mudolo</button><br><br>
+    
+    <div id="idErgebnis">Ergebnis ...</div>
+    <a href="../index.html">Zurück</a>
+
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
